@@ -1,49 +1,73 @@
-banco-azure-dio
-Projeto desenvolvido como parte do bootcamp "XP Inc. - Cloud com Inteligência Artificial", proposto pela DIO.
+# Projeto: Instância de Banco de Dados SQL no Azure
 
-Projeto de Instância de Banco de Dados SQL no Azure
-Este repositório contém a documentação e os passos para a criação de uma instância gerenciada de SQL no Microsoft Azure. O objetivo é demonstrar o processo de configuração de um banco de dados SQL na nuvem, documentando o aprendizado de como configurar e gerenciar instâncias de banco de dados no Azure.
+Este repositório documenta o processo de configuração e gestão de uma instância de Banco de Dados SQL no Microsoft Azure, com foco em aplicar conceitos aprendidos ao longo dos desafios de modelagem de banco de dados e operações em nuvem. O projeto é uma prática da criação de uma instância gerenciada de banco de dados no Azure e está vinculado ao Bootcamp **IA Aplicada a Dados com Copilot** da DIO.
 
-Objetivos
-Configuração do Banco de Dados: Criar uma instância de banco de dados SQL no Azure utilizando as ferramentas fornecidas pela plataforma.
-Documentação: Registrar o processo de criação da instância e quaisquer observações importantes para facilitar futuras implementações.
-Uso do GitHub: Criar um repositório público para compartilhar a documentação técnica e o processo de configuração.
-Passos para Configuração
-Criar uma Instância de Banco de Dados no Azure:
+## Objetivos do Projeto
 
-Acesse o Azure Portal.
-Crie uma nova instância de banco de dados SQL, configurando o nome do servidor, camadas de preço, e credenciais de acesso.
-Nome do servidor: srv-sql-dio.database.windows.net
-Camada de preço: Uso Geral - Sem servidor: Gen5, 2 vCores
-Região: West US 2
-Atraso da pausa automática: 1 hora
-Conectar ao Banco de Dados:
+O projeto visa a configuração e o gerenciamento de uma instância de banco de dados SQL no Azure, documentando o processo de:
 
-Utilize o SQL Server Management Studio (SSMS) ou Azure Data Studio para conectar ao servidor utilizando o nome do servidor srv-sql-dio.database.windows.net.
-Teste a conexão executando uma consulta simples como:
-SELECT GETDATE();
-Configurações de Segurança e Backup:
+- Criação de uma instância de banco de dados no Azure;
+- Conexão ao banco de dados utilizando ferramentas como **SQL Server Management Studio (SSMS)** ou **Azure Data Studio**;
+- Configuração de segurança e otimização de recursos;
+- Compartilhamento de experiência e melhores práticas por meio de documentação técnica.
 
-Configuração de Firewall: Assegure que o IP da sua máquina esteja permitido no firewall do Azure.
-Pontos de Restauração: No momento, não há pontos de restauração configurados.
-Detalhes da Instância
-Assinatura: Azure subscription 1
+## Ferramentas e Tecnologias Utilizadas
+
+- **Microsoft Azure**: Plataforma de nuvem usada para criar e gerenciar a instância de banco de dados SQL.
+- **SQL Server Management Studio (SSMS)** / **Azure Data Studio**: Ferramentas para conexão e gestão do banco de dados SQL.
+- **GitHub**: Repositório para documentação do processo e compartilhamento do projeto.
+
+## Passos de Implementação
+
+### 1. **Criação da Instância de Banco de Dados no Azure**
+
+- Acesse o [Azure Portal](https://portal.azure.com/).
+
+- Crie uma nova instância de banco de dados SQL, configurando o nome do servidor, a camada de preços e as credenciais de acesso.
+
+  **Detalhes da instância**:
+
+  - Nome do servidor: `srv-sql-dio.database.windows.net`
+  - Camada de Preço: `Uso Geral - Sem servidor: Gen5, 2 vCores`
+  - Região: `West US 2`
+  - Atraso da pausa automática: `1 hora`
+
+### 2. **Configuração de Segurança e Firewall**
+
+- Configure o firewall para permitir conexões de seu IP local.
+- No portal Azure, acesse a opção de **Firewall** e adicione o IP da sua máquina à lista de IPs permitidos.
+
+### 3. **Conectar ao Banco de Dados**
+
+- Utilize **SQL Server Management Studio (SSMS)** ou **Azure Data Studio** para conectar ao servidor criado (`srv-sql-dio.database.windows.net`) utilizando suas credenciais de administrador.
+
+  Exemplo de consulta para testar a conexão:
+
+  ```sql
+  SELECT GETDATE();
+  ```
+
+4. Gerenciamento e Backups
+   Não há pontos de restauração configurados inicialmente.
+
+A instância de banco de dados está configurada para pausas automáticas após 1 hora de inatividade, conforme configurado na camada sem servidor.
+
+Detalhes Técnicos
+Assinatura Azure: Azure subscription 1
+
 Grupo de Recursos: rg-vm-dio
-Localização: West US 2
+
 Nome do Servidor: srv-sql-dio.database.windows.net
-Autenticação: Microsoft Entra ou SQL Server Authentication
-Camada de Preço: Gratuito - Uso Geral - Sem servidor: Gen5, 2 vCores
-Recursos
-Documentação Oficial do Azure: Documentação sobre Banco de Dados SQL no Azure
-Documentação do GitHub: GitHub Docs
-Capturas de Tela
-As capturas de tela abaixo demonstram os passos de configuração no portal do Azure:
 
-Tela de Criação do Banco de Dados: Tela de Criação do Banco de Dados
+Método de Autenticação: Microsoft Entra
 
-Configuração de Firewall no Azure: Configuração de Firewall
+Camada de Preço: Uso Geral - Sem servidor: Gen5, 2 vCores
+
+Região: West US 2
 
 Conclusão
-Neste projeto, configuramos uma instância de banco de dados SQL no Azure, testamos a conexão e documentamos o processo para referência futura. O repositório foi criado para servir como material de apoio para implementações semelhantes.
+Com a configuração da instância de banco de dados SQL no Azure, completamos mais um passo no aprendizado de gestão de bancos de dados na nuvem, aplicado em um contexto de alta disponibilidade e escalabilidade. Este repositório serve como material de apoio, documentando o processo e compartilhando as melhores práticas para futuras implementações.
 
-Nota: A documentação está em constante atualização. Sinta-se à vontade para contribuir com melhorias ou atualizações.
+
+Nota: O repositório está em constante atualização com novos aprendizados e ajustes. Sinta-se à vontade para contribuir com sugestões ou melhorias no processo.
+
